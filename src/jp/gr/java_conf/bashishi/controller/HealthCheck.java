@@ -33,6 +33,7 @@ public class HealthCheck {
         dispKeys.add("REFERER");
         dispKeys.add("USER_AGENT");
 
+        
         // リクエスト情報取得
         Map<String, String> propMap = new LinkedHashMap<>();
         propMap.put("HOSTNAME", System.getenv("HOSTNAME"));
