@@ -44,13 +44,13 @@ public class Controller extends HttpServlet {
     public String healthCheckPage(HttpServletRequest request, HttpServletResponse response) {
         // 表示を許可するパラメータ
         List<String> dispKeys  = new ArrayList<>();
-//        dispKeys.add("HOSTNAME");
-//        dispKeys.add("REMOTE_HOST");
-//        dispKeys.add("REMOTE_ADDR");
-//        dispKeys.add("SERVER_NAME");
-//        dispKeys.add("REQUEST_URL");
-//        dispKeys.add("REFERER");
-//        dispKeys.add("USER_AGENT");
+        dispKeys.add("HOSTNAME");
+        dispKeys.add("REMOTE_HOST");
+        dispKeys.add("REMOTE_ADDR");
+        dispKeys.add("SERVER_NAME");
+        dispKeys.add("REQUEST_URL");
+        dispKeys.add("REFERER");
+        dispKeys.add("USER_AGENT");
 
         // リクエスト情報取得
         Map<String, String> propMap = new LinkedHashMap<>();
@@ -67,7 +67,7 @@ public class Controller extends HttpServlet {
         if (cookies != null) {
             for (Cookie c : cookies) {
                 propMap.put(c.getName(), c.getValue());
-//                dispKeys.add(c.getName());
+                dispKeys.add(c.getName());
             }
         }
 
